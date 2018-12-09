@@ -18,7 +18,7 @@ public class BeanScopeDemoApp {
 				
 				// call methods on the bean
 				System.out.println("Is theCoach And theSecondCoach Pointing same reference : "+ (theCoach==theSecondCoach));
-				
+				System.out.println(theCoach.getDailyFortune());
 				// close the context
 				context.close();
 	}

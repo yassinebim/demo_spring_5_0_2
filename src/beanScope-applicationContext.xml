@@ -15,7 +15,10 @@
 	<!-- <bean id="myCoach" class="com.bimz.springdemo.TrackCoach"> </bean> -->
 
 	<!-- Constructor Injection -->
-	<bean id="myCoach" class="com.bimz.springdemo.BaseballCoach" scope="prototype">
+	<bean id="myCoach" class="com.bimz.springdemo.BaseballCoach"
+		scope="singleton" 
+		init-method="doMyStartupStuff" 
+		destroy-method="doMyShuttingDownStuff">
 		<constructor-arg ref="myFortuneService"></constructor-arg>
 	</bean>
 </beans>
